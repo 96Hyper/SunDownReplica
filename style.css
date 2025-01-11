@@ -1,0 +1,182 @@
+@font-face {
+  font-family: neu;
+  src: url(./fonts/NeueHaasDisplayMediu.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "neu";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#page1 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+  position: relative;
+  padding: 0 2vw;
+}
+
+nav {
+  padding: 2vw 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav-part2 {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+#nav-part2 h4 {
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.596);
+  border-radius: 50px;
+  font-weight: 500;
+  color: #000000;
+  font-size: 18px;
+  position: relative;
+  transition: all ease 0.4s;
+  overflow: hidden;
+}
+
+#nav-part2 h4 a {
+  text-decoration: none;
+  color: #000000bb;
+  z-index: 9;
+  position: relative;
+}
+
+#nav-part2 h4:hover a {
+  color: white;
+}
+
+#nav-part2 h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: -100%;
+  border-radius: 60%;
+  transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+#center{
+  height: 65vh;
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #0000003c;
+  padding-bottom: 4vw;
+
+}
+
+#left{
+  width:30vw ;
+  font-size: 1.8vw;
+  line-height: 2vw; 
+}
+#center h1{
+  font-size: 9vw;
+  line-height: 8vw;
+  text-align: right;
+}
+
+#page1 video {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 4vw;
+  position: relative;
+ 
+}
+
+
+#hero-shape{
+  position: absolute;
+  height: 36vw;
+  width: 46vw;
+
+  right: 0;
+  top: 65vh;
+  
+}
+
+#hero-1{
+height: 100%;
+width: 100%;
+background-color: orangered;
+border-top-left-radius: 50%;
+border-bottom-left-radius: 50%;
+filter: blur(20px);
+position: absolute;
+}
+
+
+#hero-2{
+  height: 30vw;
+  width: 30vw;
+  background:linear-gradient(#fe320a , #fe630a) ;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(15px);
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    
+  }
+  
+#hero-3{
+  height: 30vw;
+  width: 30vw;
+background:linear-gradient(#fe320a , #fe630a) ;
+ border-radius: 50%;
+  filter: blur(25px);
+  position: absolute;
+  animation-name: anime1;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  }
+
+  @keyframes anime1 {
+    from{
+      transform: translate(55% , -2%);
+    }
+    to{
+      transform: translate(10%,10%);
+    }
+  }
+
+  @keyframes anime2 {
+    from{
+      transform: translate(5% , -5%);
+    }
+    to{
+      transform: translate(-20%,30%);
+    }
+  }

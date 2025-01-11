@@ -180,3 +180,53 @@ background:linear-gradient(#fe320a , #fe630a) ;
       transform: translate(-20%,30%);
     }
   }
+
+
+  #page2{
+    padding: 8vw 0 ;
+    min-height: 100vh;
+    width: 100%;
+    
+
+  }
+
+  .con{
+   white-space:nowrap;
+   display: inline-block;
+   animation-name: move;
+   animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+   
+  }
+
+  #moving-text {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+  #moving-text::-webkit-scrollbar{
+    display: none;
+  }
+
+  #gola{
+    height: 70px;
+    width: 70px;
+    background-color: #fe320a;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw 2vw;
+  }
+  #moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+   
+  }
+
+  @keyframes move {
+    from{
+      transform: translateX(0);
+    }to{
+      transform: translateX(-100%);
+    }
+  }
